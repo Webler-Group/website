@@ -12,6 +12,10 @@
     outline: none;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
 .nosizeing, body, .menubar-item {
     margin: 0;
     padding: 0;
@@ -79,7 +83,10 @@
     top: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 1s ease-in;
+    -webkit-transition: opacity 1s ease-in;
+       -moz-transition: opacity 1s ease-in;
+         -o-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
     z-index: 99;
 }
 
@@ -132,10 +139,51 @@
     margin-left: auto;
 }
 
-.banner-logo {
-    width: 60%;
-    min-width: 100px;
-    max-width: 800px;
+.sidebar-opener {
+    width: 4vw;
+    height: 3.8vw;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.sidebar-opener:hover {
+    background-color: rgb(0, 139, 219);
+}
+
+.sidebar-opener:active {
+    background-color: rgb(1, 90, 141);
+}
+
+.sidebar-opener img {
+    -webkit-filter: invert(.8);
+            filter: invert(.8);
+}
+
+.sidebar-opener img:active {
+    -webkit-filter: invert(.8);
+            filter: invert(.8);
+}
+
+.sidebar {
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    left: -15vw;
+    top: 0;
+    -webkit-transition: left .4s ease-out;
+       -moz-transition: left .4s ease-out;
+         -o-transition: left .4s ease-out;
+            transition: left .4s ease-out;
+    background-color: rgb(83, 53, 154);
+    z-index: 99;
+}
+
+.sidebar-header {
+    width: 100%;
+    height: 30vh;
 }
 
 .banner {
@@ -144,6 +192,12 @@
     min-height: 200px;
     max-height: 15vw;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.banner-logo {
+    width: 60%;
+    min-width: 120px;
+    max-width: 800px;
 }
 
 .banner-layer-1 {
@@ -203,6 +257,7 @@
     margin-left: auto;
     z-index: 0;
     background: transparent;
+    text-align: left;
 }
 
 .banner-img {
@@ -414,6 +469,7 @@ a:visited {
     background-color: rgb(53, 53, 154);
     display: none;
     position: fixed;
+    z-index: 99;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -428,9 +484,13 @@ a:visited {
 }
 
 .contextmenu-element:hover {
-    background-color: rgb(0, 162, 255);
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    background-color: rgb(0, 139, 219);
+}
+
+.contextmenu-element hr {
+    border: none;
+    height: 2px;
+    background-color: white;
 }
 
 .contextmenu-text {
