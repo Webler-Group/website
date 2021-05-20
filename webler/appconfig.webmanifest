@@ -1,0 +1,24 @@
+{
+    "lang": "en-US",
+    "name": "Webler",
+    "short_name": "Webler",
+    "start_url": "home.html",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme": "rgb(53, 53, 154)",
+    "background_color": "rgb(53, 53, 154)",
+    "description": "Webler's app, receive news and products at any time!",
+    "icons": [{
+        "src": "resources/images/logo_icon.ico",
+        "sizes": "16x16",
+        "type": "icon"
+    }, {
+        "src": "resources/images/logo_icon.png",
+        "sizes": "32x32",
+        "type": "image/png"
+    }, {
+        "src": "resources/images/logo_icon.png",
+        "sizes": "96x96",
+        "type": "image/png"
+    }]
+}

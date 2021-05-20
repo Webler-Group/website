@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" role="application">
+    <head>
+        <title>Webler - Home</title>
+        <!-- metadata-->
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- styles, layout, fonts & favicons -->
+        <link rel="shortcut icon" href="resources/images/logo_icon.ico"/>
+        <link rel="icon" type="image/png" href="resources/images/logo_icon.png" sizes="32x32"/>
+        <link rel="icon" type="image/png" href="resources/images/logo_icon.png" sizes="96x96"/>
+        <link rel="apple-touch-icon" href="resources/images/logo_icon.png" sizes="180x180"/>
+        <link rel="manifest" href="appconfig.webmanifest"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/responsive/mobile-adjust.css" media="screen and (max-width:799px)"/>
+        <link rel="stylesheet" type="text/css" href="styles/utils/animations.css"/>
+        <!-- external scripts & libraries -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@10" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://kit.fontawesome.com/483bb85795.js" integrity="sha384-OEbAF4XVtLbckKcRd6AppYZ2iABKGHk8XcK44aWfI8LgP9MDKcV02Ejl1NYdgBzU" crossorigin="anonymous"></script>
+        <!-- intern scripts -->
+        <script type="text/javascript" src="scripts/libs/event-manager.js"></script>
+        <script type="text/javascript" src="scripts/assets/loader.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <!-- more metadata -->
+        <meta name="copyright" content="webler-group (all members of this organisation: https://github.com/WeblerGroup)"/>
+        <meta name="application-name" content="Webler"/>
+        <meta name="description" content="Webler: Free Software, Games and more"/>
+        <meta name="author" content="webler-group"/>
+        <meta name="keywords" content="webler, webler-group, software, games, software free, webler website, webler group, cryphean, dondejvo"/>
+    </head>
+    <body>
+        <div id="loading-screen" class="flex-centered-horizontal">
+            <div class="center-bar flex-centered-horizontal nosizeing">
+                <div class="loader loader-large"></div>
+                <div class="p-container flex-centered-horizontal nosizeing">
+                    <p class="logo-text">
+                        <img src="resources/images/logo.png" width="100%" height="100%" alt="webler"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-open flex-centered-vertical" tabindex="0">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+        <div class="headbar-background" data-hidden="true"></div>
+        <div class="headbar" data-hidden="true">
+            <div class="headbar-item">
+                <img src="resources/images/logo.png" height="100%" alt="Webler"/>
+            </div>
+        </div>
+        <div class="sidebar flex-centered-vertical">
+            <div class="sidebar-close flex-centered-horizontal" tabindex="0">
+                <i class="fas fa-times fa-2x"></i>
+            </div>
+            <div class="sidebar-header flex-evenly-vertical nosizeing">
+                <div class="sidebar-header-text flex-centered-horizontal">
+                    <p>Settings</p>
+                </div>
+            </div>
+            <div class="sidebar-content flex-evenly-vertical nosizeing">
+                <div class="settings-option flex-centered-horizontal">
+                    <p class="settings-label">Nightmode:</p>
+                    <div class="checkbox" id="nightmode" data-activated="off" data-event="toggleNightmode();"></div>
+                </div>
+                <div class="settings-option flex-centered-horizontal">
+                    <p class="settings-label">Save Settings:</p>
+                    <div class="checkbox" id="keepsettings" data-activated="off" data-event="_l();"></div>
+                </div>
+            </div>
+            <div class="sidebar-header flex-evenly-vertical nosizeing">
+                <div class="sidebar-header-text flex-centered-horizontal">
+                    <p>Account</p>
+                </div>
+            </div>
+            <form class="sidebar-content flex-centered-vertical nosizeing" id="signIn" autocomplete="off">
+                <div class="settings-option">
+                    <input class="login-input" id="email" type="email" placeholder="Gmail Address" aria-placeholder="Please enter your Gmail Address." aria-required aria-autocomplete="" autocomplete="off" autocapitalize="off" autocorrect="off" required autofocus/>
+                </div>
+                <div class="settings-option" style="margin-top: 20px;">
+                    <input class="login-input" id="password" type="password" placeholder="Password" aria-placeholder="Please enter your password." aria-required aria-autocomplete="" autocomplete="off" autocapitalize="off" autocorrect="off" required autofocus/>
+                </div>
+                <div class="settings-option flex-evenly-horizontal" style="margin-top: 20px;">
+                    <button type="submit" id="login-submit" class="form-button" tabindex="0">Sign In</button>
+                </div>
+            </form>
+            <form class="sidebar-content small flex-centered-vertical nosizeing" id="signOut" autocomplete="off" style="border-top: 1px solid grey">
+                <div class="settings-option flex-evenly-horizontal">
+                    <button type="submit" id="logout-submit" class="form-button" tabindex="0" disabled aria-disabled="true">Sign Out</button>
+                </div>
+            </form>
+        </div>
+        <div class="page flex-centered-vertical nosizeing">
+            <div class="header" role="banner" aria-roledescription="The title screen of Webler.">
+                <div class="header-caption">
+                    <p class="header-caption-logo">
+                        <img src="resources/images/logo_transparent.png" height="100%" alt="Webler -" importance="high" role="img"/>
+                    </p>
+                    <p class="header-caption-text nosizeing">
+                        <span class="fadein-bottom">Software Engineering</span>
+                    </p>
+                    <p class="header-caption-slogan"> 
+                        <span class="fadein-bottom">- Building the future, step by step. -</span>
+                    </p>
+                </div>
+                <div class="header-footer"></div>
+            </div>
+            <div class="header-references">
+                <img class="header-references-img" src="resources/images/github-mark.png" width="27px" alt=""/>
+                &nbsp;
+                <a class="header-link" href="https://github.com/WeblerGroup" target="_blank" title="Our official GitHub" role="link" aria-roledescription="Hyperlink to our official GitHub.">GitHub</a>
+                <span class="header-breakline"></span>
+                <i class="fas fa-envelope header-references-fa"></i>
+                &nbsp;
+                <a class="header-link" href="#contact" title="Contact us!" role="link" aria-roledescription="Link to a contact form.">Contact</a>
+            </div>
+            <div class="menubar flex-centered-horizontal">
+                <div class="menubar-item button" tabindex="0" data-redirect="home.html" data-enabled="off" title="You're already on this webpage!">
+                    <p class="menubar-item-content nosizeing">
+                        <span class="menubar-icon">
+                            <i class="fas fa-home fa-lg"></i>
+                        </span>
+                        <span class="menubar-text">Home</span>
+                    </p>
+                </div>
+                <div class="menubar-item button" tabindex="0" data-redirect="products.html">
+                    <p class="menubar-item-content nosizeing">
+                        <span class="menubar-icon">
+                            <i class="fas fa-code fa-lg"></i>
+                        </span>
+                        <span class="menubar-text">Products</span>
+                    </p>
+                </div>
+                <div class="menubar-item button" tabindex="0" data-redirect="posts.html">
+                    <p class="menubar-item-content nosizeing">
+                        <span class="menubar-icon">
+                            <i class="far fa-newspaper fa-lg"></i>
+                        </span>
+                        <span class="menubar-text">News</span>
+                    </p>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="page-content-box" style="margin-top: 100px;">
+                    <p class="page-content-box-caption nosizeing">
+                        <span>Information</span>
+                    </p>
+                    <p class="page-content-box-text nosizeing">Hey! We're Webler, a group of independent developers around the world. We create applications of any kind, but mostly for the web. All our products are meant to be either useful or fun, but most importantly free! Our goal is to make accessible, innovative software, that's our contribution to a better future. We hope that some of our projects might be helpful and enjoyable for you :D <br /><br /> Here's an overview of our projects and news:</p>
+                </div>
+                <div class="page-content-box large">
+                    <div class="page-content-box-half">
+                        <div class="half-box">
+                            <div class="half-box-caption">
+                                <p class="half-box-caption-text">
+                                    <span>Our Projects</span>
+                                </p>
+                            </div>
+                            <div class="half-box-body">
+                                <div class="half-box-body-container">
+                                    <ul>
+                                        <li>All our projects are listed here.</li>
+                                        <li>They are all downloadable, some are can be directly launched in this website.</li>
+                                        <li>Not all programs are supported on every platform, watch out for compabillity tags.</li>
+                                    </ul>
+                                </div>
+                                <div class="half-box-body-footer">
+                                    <div class="half-box-button">
+                                        <a href="/products" title="visit products" tabindex="0">
+                                            <span class="half-box-button-label">
+                                                <i class="fas fa-arrow-right fa-lg"></i>
+                                                &nbsp;
+                                                Check out!
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content-box-half">
+                        <div class="half-box">
+                            <div class="half-box-caption">
+                                <p class="half-box-caption-text">
+                                    <span>News & Posts</span>
+                                </p>
+                            </div>
+                            <div class="half-box-body">
+                                <div class="half-box-body-container">
+                                    <ul>
+                                        <li>Read the newsletter and update information.</li>
+                                        <li>Inform yourself about the current stage of development.</li>
+                                        <li>Get an insight on what's planned for the future.</li>
+                                    </ul>
+                                </div>
+                                <div class="half-box-body-footer">
+                                    <div class="half-box-button">
+                                        <a href="/posts" title="visit News" tabindex="0">
+                                            <span class="half-box-button-label">
+                                                <i class="fas fa-arrow-right fa-lg"></i>
+                                                &nbsp;
+                                                Have a look!
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content-box" style="margin-top: 150px;">
+                    <p class="page-content-box-caption nosizeing">
+                        <span>Contact Us</span>
+                    </p>
+                    <p class="page-content-box-text nosizeing">Here you can contact us for suggestions, bug reports, feedback, and everything else that could be interesting!<br />Our E-mail address is weblergroup@outlook.com.<br /><br />Note: Please be objective and do not spam.</p>
+                </div>
+                <div class="page-content-box large">
+                    <form class="email-form" id="contact" autocomplete="off">
+                        <div class="email-header">
+                            <div class="email-header-info">
+                                <input id="name" class="email-info-input" type="text" role="textbox" placeholder="Your name..." maxlength="20" required aria-roledescription="Enter your name..." aria-placeholder="Your name..." aria-required="true"/>
+                            </div>
+                            <div class="email-header-info">
+                                <input id="contact-email" class="email-info-input" type="email" role="textbox" placeholder="Your e-mail... (optional)" aria-roledescription="Enter your name..." aria-required="false"/>
+                            </div>
+                        </div>
+                        <div class="email-content">
+                            <textarea id="email-text" class="email-text" maxlength="1500" placeholder="Feedback, suggestions, bug reports, etc." role="textbox" aria-roledescription="Write some feedback, suggestions, bug reports, or something else you want to tell us." aria-placeholder="Feedback, suggestions, bug reports, etc." aria-required="true" required></textarea>
+                        </div>
+                        <div class="email-footer">
+                            <button class="contact-submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="page-content-box footer">
+                    <div class="copyright">
+                        <span class="copyright-text">&copy; 2021 WeblerGroup</span>
+                    </div>
+                    <div class="credits">
+                        <ul class="credits-list flex-centered-horizontal">
+                            <li>
+                                <span>Hosted using:&nbsp;&nbsp;</span>
+                                <span>
+                                    <a href="https://firebase.google.com/" target="_blank">
+                                        <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-standard.svg" alt="Firebase" width="100px"/>
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/assets/animations.js"></script>
+        <script type="text/javascript" src="scripts/assets/checkbox.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+        <script>
+            let firebaseConfig = {
+                apiKey: "AIzaSyDQWKo9X_xc3C25LDNilKDpVQybZ2Mrc3w",
+                authDomain: "weblergroup.firebaseapp.com",
+                databaseURL: "https://weblergroup-default-rtdb.europe-west1.firebasedatabase.app",
+                projectId: "weblergroup",
+                storageBucket: "weblergroup.appspot.com",
+                messagingSenderId: "314029573649",
+                appId: "1:314029573649:web:98ac01664230a8d8fa13b0",
+                measurementId: "G-8BPMKR1DV5"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            const auth = firebase.auth();
+            const jsondb = firebase.database();
+            const db = firebase.firestore();
+        </script>
+        <script src="scripts/firebase_setup.js" type="text/javascript"></script>
+        <noscript>Your browser does not support JavaScript which is necessary to access this application.</noscript>
+    </body>
+</html>
