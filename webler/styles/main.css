@@ -29,7 +29,7 @@
 
 /* custom properties */
 
-@media screen and (min-width: 1200px) {
+
 
 /* stylesheets */
 * {
@@ -1128,4 +1128,3 @@ body.dark-theme .header-footer {
     background-color: white;
 }
    
-}
