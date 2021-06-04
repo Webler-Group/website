@@ -21,9 +21,9 @@
 }
 
 @media screen and (max-width: 1200px) {
-    * {
+    /* * {
         display: none;
-    }
+    } */
 }
 
 
@@ -708,15 +708,16 @@ body.dark-theme .header::before {
 
 .header-caption-logo {
     margin: 5vw;
-    width: 1000px;
-    max-width: 90vw;
-    height: 200px;
+    width: 600px;
+    max-width: 50vw;
+    min-width: 30vw;
 }
 
 .header-caption-logo img {
     color: white;
     font-size: 100px;
     font-family: 'Black Ops One', cursive;
+    width: 100%;
 }
 
 .header-caption-text {
@@ -879,7 +880,7 @@ body.dark-theme .header-footer {
     display: inline-block;
     width: 600px;
     height: 500px;
-    position: relative
+    position: relative;
 }
 
 .half-box {

@@ -1,3 +1,19 @@
+* {
+    shape-rendering: auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    scrollbar-width: none;
+    scroll-behavior: auto;
+    text-rendering: auto;
+     -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    image-rendering: -webkit-optimize-contrast;
+    box-sizing: border-box;
+}
+
 .sidebar {
     width: 100%;
 }
@@ -5,52 +21,53 @@
 .banner-layer-1 {
     display: none;
 }
-    
+
 .banner-layer-2 {
     top: 0;
     display: none;
 }
-    
+
 .banner-layer-3 {
     top: 0;
 }
-    
+
 .banner {
     background-color: rgb(53, 53, 154);
 }
-    
+
 .banner-left, .banner-right {
     width: 50%;
 }
-    
+
 .banner-caption {
     font-size: 16px;
 }
-    
+
 .banner-text {
     font-size: 8px;
 }
-    
+
 .menubar {
     min-height: auto;
     max-height: 60px;
 }
-    
+
 .icon {
     width: 16px;
     height: 16px;
 }
-    
+
 .header {
     width: 100%;
     height: auto;
     margin-top: 20px;
+    min-height: 50vh;
 }
-    
+
 .header-text {
     font-size: 32px;
 }
-    
+
 .page-content-box-row {
     width: 80%;
     flex: 1 0 auto;
@@ -59,15 +76,116 @@
     margin-right: 12px;
     margin-top: 12px;
 }
-    
+
 .box-row-image {
     max-width: 100px;
 }
-    
+
 .box-row-content-header {
     font-size: 20px;
 }
-    
+
 .box-row-content-text {
     font-size: 16px;
+}
+
+.header-caption-logo {
+    margin: 5vw auto;
+    width: 50vw;
+}
+
+.header-caption-text {
+    height: 50px;
+    font-size: 25px;
+}
+
+.header-caption-slogan {
+    margin: 2vw 5vw;
+    width: 1300px;
+    max-width: 90vw;
+    height: 75px;
+    color: rgba(220, 219, 226, 0.965);
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
+    overflow: hidden;
+}
+
+.header-footer {
+    display: none;
+}
+
+.page-content-box {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.page-content-box.large {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+}
+
+.page-content-box-half {
+    display: inline-block;
+    width: 85vw;
+    height: auto;
+    position: relative;
+    margin: auto;
+    padding: 5vh 0;
+}
+
+.half-box {
+    position: static;
+    margin: auto;
+    -webkit-transform: translate(0, 0);
+       -moz-transform: translate(0, 0);
+         -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+.half-box-button-label {
+    font-size: 15px;
+    padding: 0 1px;
+    height: 30px;
+    margin: auto;
+}
+
+.half-box-button {
+    margin-bottom: 40px;
+}
+
+.email-header-info {
+    padding: 5px;
+}
+
+.email-info-input {
+    width: 80vw;
+    height: 40px;
+    font-size: 18px;
+}
+
+.email-text {
+    width: 90vw;
+    height: 150px;
+}
+
+.email-footer {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+}
+
+.page-content-box.footer {
+    width: 100vw;
+}
+
+.login-input {
+    margin-left: 0;
+}
+
+.headbar-item {
+    position: relative;
+    left: 25vw;
 }
