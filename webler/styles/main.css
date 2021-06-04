@@ -15,9 +15,9 @@
 
 /* landscape block */
 @media screen and (max-width: 700px) and (orientation: landscape) {
-    * {
+    /* * {
         display: none;
-    }
+    }*/
 }
 
 @media screen and (max-width: 1200px) {
@@ -29,7 +29,7 @@
 
 /* custom properties */
 
-
+@media screen and (min-width: 1200px) {
 
 /* stylesheets */
 * {
@@ -1126,4 +1126,6 @@ body.dark-theme .header-footer {
     padding: 5px 10px;
     border-radius: 5px;
     background-color: white;
+}
+   
 }
